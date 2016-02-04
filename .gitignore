@@ -1,0 +1,9 @@
+mainfile.tex
+macros.tex
+*.*~
+*.log
+*.aux
+*.ps
+*.pdf
+*.dvi
+old/
