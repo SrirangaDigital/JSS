@@ -1,0 +1,113 @@
+%demi 1/4th size
+\usepackage[papersize={215mm,280mm},
+topmargin=20mm,botmargin=20mm,leftmargin=20mm,rightmargin=20mm,
+headheight=5mm,headsep=5mm,footskip=6mm,cropmarks,nopagenumbers]{zwpagelayout}
+
+\usepackage{textpos}
+
+\tolerance=4000
+\defaulthyphenchar=32
+
+%~ \makeatletter
+%~ \def\@makechapterhead#1{%
+  %~ \vspace*{10\p@}%
+  %~ {\parindent \z@ \centering \normalfont
+    %~ \interlinepenalty\@M
+    %~ \Huge \bfseries #1\par\nobreak
+    %~ \vskip 20\p@
+%~ }}
+%~ 
+%~ \makeatother
+
+\newcounter{num}
+\newcounter{expnum}
+\newcounter{subnum}
+\newcounter{subexpnum}
+
+\def\kano{\rotatebox{180}{o}}
+\def\kanO{\rotatebox{180}{O}}
+
+\def\ra{\char'273}
+\def\rA{\char'273\char'301}
+\def\ri{\char'273\char'236}
+\def\ru{\char'273\char'304}
+\def\rU{\char'273\char'261}
+\def\ro{\char'273\char'311\char'306}
+\def\re{\char'273\char'311}
+\def\rO{\char'273\char'311\char'306\char'126}
+
+\def\eng#1{{\fontfamily{txr}\fontsize{12}{14}\selectfont #1}}
+
+\def\entry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
+\def\endentry{\egroup\par\medskip}
+
+\def\shl{\bgroup\raggedright\leftskip=12pt\vbox\bgroup\fontsize{11pt}{13pt}\selectfont\sl\ignorespaces}
+\def\endshl{\egroup\egroup\par}
+
+\long\def\pauthor#1{\vskip -6pt\bgroup~\hfill\fontsize{10pt}{12pt}\selectfont #1\egroup\vskip1.5pt}
+
+\def\word#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{14pt}{14pt}\selectfont\bf #1}\thinspace:\markboth{#1}{#1}}\relax
+%\def\word#1{{\noindent{\bf #1\thinspace:}\markboth{#1}{#1}}}
+\def\gl#1{{\bf (#1).}}
+\long\def\mngnum#1{{\setcounter{expnum}{0}\stepcounter{num}\thenum. #1}\newline}
+\long\def\submngnum#1{{\setcounter{subexpnum}{0}\stepcounter{subnum}\thenum. #1}\newline}
+
+
+
+%%%%%%%%%%%%%%%
+\long\def\meaning#1{#1\par}
+\long\def\newmeaning#1{\noindent\hangindent=0.35cm\hangafter=0 #1\par}
+\long\def\subnewmeaning#1{\noindent\hangindent=0.7cm\hangafter=0 #1\par}
+\long\def\artha#1{\setcounter{expnum}{0}\stepcounter{num}{\bf\thenum. #1}}
+\long\def\subartha#1{\setcounter{subexpnum}{0}\stepcounter{subnum}{\bf(\thesubnum) #1}}
+\long\def\arthanonum#1{{\bf #1}}
+\long\def\ni#1{{(#1)}}
+\long\def\ullekha#1{{\fontsize{11pt}{13pt}\selectfont #1}}
+%%%%%%%%%%%%%%%
+
+\long\def\mngnumm#1{{\setcounter{expnum}{0}\stepcounter{num}\thenum. #1}}
+\long\def\vachana#1{{\setcounter{expnum}{0}\stepcounter{num}\thenum. #1}}
+\long\def\vachanai#1{{\setcounter{expnum}{0}\stepcounter{num}\thenum.\sl #1}}
+\long\def\expl#1{{#1}}
+\long\def\explnum#1{\stepcounter{expnum}\theexpnum. #1}
+\long\def\mng#1{\setcounter{expnum}{0}#1}
+\long\def\imng{\indent}
+\def\SEE#1{\hfill(parA. #1)\par}
+
+\def\src#1{{\bf (#1).}}
+
+\renewcommand\chaptermark[1]{}
+\renewcommand\sectionmark[1]{}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{%
+\lhead[]{}%
+\rhead[]{}%
+\chead[]{}%
+\cfoot[{\small\rm\thepage}]{{\small\rm\thepage}}}
+
+\lhead[\bf\small\rightmark]{\bf\small\rightmark}
+\rhead[\bf\small\leftmark]{\bf\small\leftmark}
+\chead[]{}
+%\cfoot[]{}
+
+\def\info#1#2#3#4{%
+\if#1-
+\else
+\textbf{kaq.saM:} #1, 
+\fi
+\if#2-
+\else
+\textbf{saMdhi/AshAvxsa padayx:} #2, 
+\fi
+\if#3-
+\else
+\textbf{pu.saM:} #3, 
+\fi
+\if#4-
+\else
+\textbf{parx.va:} #4.
+\fi
+}
+
+\pagestyle{fancy}
