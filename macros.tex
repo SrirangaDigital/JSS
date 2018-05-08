@@ -41,7 +41,7 @@ headheight=5mm,headsep=5mm,footskip=6mm,cropmarks,nopagenumbers]{zwpagelayout}
 \def\eng#1{{\fontfamily{txr}\fontsize{12}{14}\selectfont #1}}
 
 \def\entry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
-\def\endentry{\egroup\par\medskip}
+\def\endentry{\egroup\vskip .6\baselineskip}
 
 \def\shl{\bgroup\raggedright\leftskip=12pt\vbox\bgroup\fontsize{11pt}{13pt}\selectfont\sl\ignorespaces}
 \def\endshl{\egroup\egroup\par}
@@ -60,7 +60,7 @@ headheight=5mm,headsep=5mm,footskip=6mm,cropmarks,nopagenumbers]{zwpagelayout}
 \long\def\meaning#1{#1\par}
 \long\def\newmeaning#1{\noindent\hangindent=0.35cm\hangafter=0 #1\par}
 \long\def\subnewmeaning#1{\noindent\hangindent=0.7cm\hangafter=0 #1\par}
-\long\def\artha#1{\setcounter{expnum}{0}\stepcounter{num}{\bf\thenum. #1}}
+\long\def\artha#1{\setcounter{expnum}{0}\stepcounter{num}{\bf\thenum.~#1}}
 \long\def\subartha#1{\setcounter{subexpnum}{0}\stepcounter{subnum}{\bf(\thesubnum) #1}}
 \long\def\arthanonum#1{{\bf #1}}
 \long\def\ni#1{{(#1)}}
