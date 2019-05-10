@@ -6,6 +6,8 @@
 \usepackage{longtable}
 \usepackage{lscape,multicol}
 \setlength{\columnsep}{.7cm}
+\usepackage{supertabular}
+
 
 %\parindent=0pt
 %\everypar{\noindent\hangindent=10pt\hangafter=0}
@@ -13,10 +15,11 @@
 
 \input macros
 %\input final-dict
-\input dictionary %for jss-001-281.tex
-%\input dictionary1
+%\input dictionary %for jss-001-281.tex
+\input dict-1.tex %for jss-282-501.tex
+%\input dict-2.tex %for jss-282-501.tex
 %\input dictionary3
-\input anu-dictionary
+%\input anu-dictionary
 %\input dict-ta-ma-03042019
 %\input dict-ya-La-03042019
 \begin{document}
@@ -27,13 +30,16 @@
 
 \begin{multicols}{2}
 \setlength{\columnseprule}{.5pt}
-\input tex-for-print/jss-001-281.tex
-%\input tex-for-print/jss-282-501.tex
-%\setcounter{page}{300}
+%\input tex-for-print/jss-001-281.tex
+\setcounter{page}{261}
+\input tex-for-print/jss-282-501.tex
+%\setcounter{page}{559}
 %\input tex-for-print/ya-La.tex
 \newpage
-\input tex-for-print/anubandha-1.tex
+%\setcounter{page}{767}
+%\input tex-for-print/anubandha-1.tex
 \end{multicols}
 \newpage
 \input tex-for-print/anubandha-2.tex
+\input tex-for-print/anubandha-3.tex
 \end{document}
