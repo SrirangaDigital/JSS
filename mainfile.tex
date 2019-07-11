@@ -8,6 +8,9 @@
 \setlength{\columnsep}{.7cm}
 \usepackage{supertabular}
 
+\usepackage{makeidx}
+
+\makeindex
 
 %\parindent=0pt
 %\everypar{\noindent\hangindent=10pt\hangafter=0}
@@ -39,4 +42,25 @@
 \newpage
 \input tex-for-print/anubandha-2.tex
 \input tex-for-print/anubandha-3.tex
+
+\newpage
+\input jss-anukramanike1
+
+%\lhead[\it\bfseries \thepage]{\it\bfseries anukramaNike}
+%\makeatletter
+%\renewenvironment{theindex}{
+%  \vspace*{-20\p@}%
+%\@makeschapterhead{\indexname}
+%   \markboth{\it\bfseries Index}%
+%                        {\it\bfseries\indexname}%
+%\addtocontents{toc}{\protect\contentsline{chapter}{Index}{\thepage}}
+%\thispagestyle{plain}\let\item\@idxitem
+
+%\begin{multicols}{3}
+%\par\bigskip}%
+%{\end{multicols}}%
+
+%\makeatother
+%\printindex
+
 \end{document}
