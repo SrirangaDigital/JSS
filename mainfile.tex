@@ -7,6 +7,7 @@
 \usepackage{lscape,multicol}
 \setlength{\columnsep}{.7cm}
 \usepackage{supertabular}
+\usepackage{tfrupee}
 
 \usepackage{makeidx}
 
@@ -30,6 +31,10 @@
 %\frontmatter
 %\tableofcontents
 
+\input title
+\newpage
+\input copyright
+\newpage
 \input nivedane
 
 \mainmatter
@@ -44,7 +49,7 @@
 \end{multicols}
 \newpage
 \input tex-for-print/anubandha-2.tex
-\input tex-for-print/anubandha-3.tex
+%\input tex-for-print/anubandha-3.tex
 \input tex-for-print/anubandha-4.tex
 
 \newpage
