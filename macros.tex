@@ -93,15 +93,11 @@ headheight=5mm,headsep=5mm,footskip=6mm,cropmarks,nopagenumbers]{zwpagelayout}
 
 \renewcommand{\headrulewidth}{0pt}
 \fancypagestyle{plain}{%
-\lhead[]{}%
-\rhead[]{}%
+\lhead[\bf\small\rightmark]{\bf\small\rightmark}
+\rhead[\bf\small\leftmark]{\bf\small\leftmark}
 \chead[]{}%
 \cfoot[{\small\rm\thepage}]{{\small\rm\thepage}}}
 
-\lhead[\bf\small\rightmark]{\bf\small\rightmark}
-\rhead[\bf\small\leftmark]{\bf\small\leftmark}
-\chead[]{}
-%\cfoot[]{}
 
 \def\info#1#2#3#4{%
 \if#1-
