@@ -57,8 +57,12 @@
 \newpage
 %\input tex-for-print/anubandha-3.tex
 \newpage
-
-\newpage
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{%
+\lhead[]{}
+\rhead[]{}
+\chead[]{}%
+\cfoot[{\rm\thepage}]{{\rm\thepage}}}
 \input jss-anukramanike1
 
 %\lhead[\it\bfseries \thepage]{\it\bfseries anukramaNike}
